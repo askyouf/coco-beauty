@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Онлайн-запись | Beauty Salon</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="booking-container">
+        <h2>Онлайн-запись</h2>
+        <form id="bookingForm" action="process_booking.php" method="POST">
+            <input type="text" name="name" placeholder="Ваше имя" required>
+            <input type="tel" name="phone" placeholder="Телефон" required>
+            <input type="email" name="email" placeholder="Email">
+            <select name="service" required>
+                <option value="">Выберите услугу</option>
+                <option value="manicure">Маникюр</option>
+                <option value="pedicure">Педикюр</option>
+                <option value="nails">Наращивание ногтей</option>
+            </select>
+            <input type="date" name="date" required>
+            <select name="time" required>
+                <option value="">Выберите время</option>
+                <option value="10:00">10:00</option>
+                <option value="11:00">11:00</option>
+                <option value="12:00">12:00</option>
+                <option value="13:00">13:00</option>
+                <option value="14:00">14:00</option>
+                <option value="15:00">15:00</option>
+                <option value="16:00">16:00</option>
+                <option value="17:00">17:00</option>
+                <option value="18:00">18:00</option>
+            </select>
+            <textarea name="comments" placeholder="Комментарии к записи"></textarea>
+            <input type="hidden" name="referrer" id="referrer" value="">
+            <button type="submit">Записаться</button>
+        </form>
+    </div>
+    <script src="booking.js"></script>
+</body>
+</html>
